@@ -4,12 +4,15 @@ using Todo.Core.Entities;
 
 namespace Todo.Application.AutoMapper
 {
-    public class MappingProfile:Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
-            CreateMap<TaskItem, TaskItemDto>().ReverseMap();
-            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<TaskItem, TaskItemDto>();
+            CreateMap<User, UserDto>();
+
+            CreateMap<TaskItemDto, TaskItem>();
+            CreateMap<UserDto, User>();
         }
     }
 }

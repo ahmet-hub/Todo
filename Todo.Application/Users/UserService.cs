@@ -66,6 +66,7 @@ namespace Todo.Application.Users
         {
             try
             {
+                var X = _mapper.Map<User>(UserDto);
                 await _userRepository.AddAsync(_mapper.Map<User>(UserDto));
 
                 return Response.Ok<UserDto>("Success");

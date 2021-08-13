@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using Todo.Core.Entities;
 
 namespace Todo.Infrastructure.Data
 {
@@ -9,8 +10,8 @@ namespace Todo.Infrastructure.Data
         {
         }
 
-        //public DbSet<Order> Orders { get; set; }
-        //public DbSet<FailedTransaction> FailedTransactions { get; set; }
+        public DbSet<User> Users{ get; set; }
+        public DbSet<TaskItem> TaskItems{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

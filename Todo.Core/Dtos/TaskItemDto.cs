@@ -6,7 +6,6 @@ namespace Todo.Core.Dtos
     {
         public string Name { get; set; }
         public DateTime Deadline { get; set; }
-        public bool IsDone { get; set; }
-        public UserDto User { get; set; }
+        public string UserId { get; set; }
     }
 }
